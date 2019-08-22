@@ -75,4 +75,36 @@ object canelones {
 			jules-=7
 		}
 	}
+		
+	method energiaPorGramo(){
+		return jules
+	}
+}
+
+object canelones_alt {
+	
+	var tieneQueso = false
+	var tieneSalsa = false
+	
+	method ponerSalsa(){ tieneSalsa = true}
+	method sacarSalsa(){ tieneSalsa = false}
+	method ponerQueso(){ tieneQueso = true}
+	method sacarQueso(){ tieneQueso = false}
+		
+	method energiaPorGramo(){
+		if (not tieneSalsa and not tieneQueso){
+			return 20
+			}
+		else if (tieneSalsa and not tieneQueso){
+			return 25
+		}
+		else if (not tieneSalsa and tieneQueso){
+			return 27
+		}
+		//los else if siempre terminan con else y no tienen condicion.
+		else {
+			return 32
+		}
+}
+}
 }

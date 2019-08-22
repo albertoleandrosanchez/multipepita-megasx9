@@ -11,7 +11,7 @@ object pepita {
 	
 	// metodos nuevos
 	method estaDebil() { return energia <50}
-	}  // implementar
+	  // implementar
 	method estaFeliz() { return energia.between(500,1000) }  // implementar
 	
 	method cuantoQuiereVolar() { 
@@ -22,7 +22,10 @@ object pepita {
 	}
 	
 	method salirAComer() {
-		self.volar(5)		// "self" es una referencia al objeto que recibe el mensaje
+		self.volar(5)
+		self.comer(alpiste,80)
+		self.volar(5)
+			// "self" es una referencia al objeto que recibe el mensaje
 		// ... completar este metodo con las otra acciones sobre self
 	}
 	
